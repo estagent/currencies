@@ -1,6 +1,6 @@
 {
-  "name": "@revgaming/appearance",
-  "version": "1.0.2",
+  "name": "@revgaming/currencies",
+  "version": "1.0.3",
   "author": "estagent <estagent@gmail.com>",
   "description": "visitor currency reference/detector",
   "homepage": "https://github.com/estagent/appearance",
