@@ -1,6 +1,6 @@
 {
   "name": "@revgaming/currencies",
-  "version": "1.0.3",
+  "version": "1.1.1",
   "author": "estagent <estagent@gmail.com>",
   "description": "visitor currency reference/detector",
   "homepage": "https://github.com/estagent/appearance",
@@ -11,6 +11,7 @@
   ],
   "main": "src/index.js",
   "dependencies": {
+    "@revgaming/config": "^1.0.1",
     "@revgaming/helpers": "^1.0.2",
     "@revgaming/preference": "^1.0.1"
   },
