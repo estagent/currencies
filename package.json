@@ -1,6 +1,6 @@
 {
   "name": "@revgaming/currencies",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "author": "estagent <estagent@gmail.com>",
   "description": "visitor currency reference/detector",
   "homepage": "https://github.com/estagent/appearance",
@@ -12,9 +12,9 @@
   "main": "src/index.js",
   "dependencies": {
     "@revgaming/config": "^2.1.1",
-    "@revgaming/helpers": "^1.0.2",
-    "@revgaming/languages": "^2.2.1",
-    "@revgaming/location": "^2.2.2",
+    "@revgaming/helpers": "^1.0.4",
+    "@revgaming/languages": "^2.3.2",
+    "@revgaming/location": "^2.2.4",
     "@revgaming/preference": "^1.0.1"
   },
   "scripts": {},

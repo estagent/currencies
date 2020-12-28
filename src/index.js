@@ -14,10 +14,8 @@ export const bootCurrencies = opts => {
         iconMainClass: 'icon',
         iconPrefix: 'ia-',
     })
-
     mergeTranslations('currencies', opts.translations ?? translations)
-
-    detectCurrencies()
+    detectCurrencyCode()
     return {
         currency: currency,
         currency_id: currency_id,
@@ -82,7 +80,7 @@ export const getCurrencies = codes => {
     return arr
 }
 
-const detectCurrencies = () => {
+const detectCurrencyCode = () => {
     if (setCurrencyCode(Preference.get('currency'))) return true
     else {
         const country = getCountry()
