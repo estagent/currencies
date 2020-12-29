@@ -17,11 +17,11 @@ export const bootCurrencies = opts => {
     mergeTranslations('currencies', opts.translations ?? translations)
     detectCurrencyCode()
     return {
-        currency: currency,
         currency_id: currency_id,
         currency_code: currency_code,
         currency_name: currency_name,
         currency_icon: currency_icon,
+        getCurrencies: getCurrencies,
     }
 }
 
