@@ -14,8 +14,7 @@ export const bootCurrencies = opts => {
         iconMainClass: 'icon',
         iconPrefix: 'ia-',
     })
-    translations['codes'] = translations
-    mergeTranslations('currencies', opts.translations ?? translations)
+    mergeTranslations('currencies', translations)
     detectCurrencyCode()
     return {
         currency_id: currency_id,
