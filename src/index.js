@@ -10,8 +10,8 @@ import currencies from './currencies'
 let options
 
 export const bootCurrencies = opts => {
-    options = mergeOptions(opts, {
-        iconMainClass: 'icon',
+    options = mergeOptions(opts.currencies ?? opts, {
+        iconClass: 'icon',
         iconPrefix: 'ia-',
     })
     mergeTranslations('currencies', translations)
@@ -43,7 +43,7 @@ export const currency_name = code =>
     __('currencies.codes.'.concat(code ? code : currency_code()))
 
 export const currency_icon = code => {
-    return options.iconMainClass
+    return options.iconClass
         .concat(' ')
         .concat(options.iconPrefix)
         .concat(code ?? currency_code())
