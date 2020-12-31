@@ -13,6 +13,7 @@ export const bootCurrencies = (opts = {}) => {
     options = mergeOptions(opts.currencies ?? opts, {
         iconClass: 'icon',
         iconPrefix: 'ia-',
+        accepted: '*',
     })
     mergeTranslations('currencies', translations)
     detectCurrencyCode()
@@ -22,6 +23,7 @@ export const bootCurrencies = (opts = {}) => {
         currency_name: currency_name,
         currency_icon: currency_icon,
         getCurrencies: getCurrencies,
+        setCurrencyCode: setCurrencyCode,
     }
 }
 
@@ -59,10 +61,16 @@ export const currency = code => {
     }
 }
 
-export const setCurrencyCode = code => {
-    if (code && Object.keys(currencies).includes(code)) {
-        config({'app.currency': code})
+const getValidCodes = () => {
+    return options.accepted instanceof Array
+        ? options.accepted
+        : Object.keys(currencies)
+}
 
+export const setCurrencyCode = (code, preferred = false) => {
+    if (code && getValidCodes().includes(code)) {
+        config({'app.currency': code})
+        if (preferred) Preference.set('currency', code)
         return true
     }
     return false
