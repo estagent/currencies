@@ -9,7 +9,7 @@ import currencies from './currencies'
 
 let options
 
-export const bootCurrencies = opts => {
+export const bootCurrencies = (opts = {}) => {
     options = mergeOptions(opts.currencies ?? opts, {
         iconClass: 'icon',
         iconPrefix: 'ia-',

@@ -6,8 +6,8 @@ export default {
     codes: {
         "try": "Лира",
         "eur": "Евро",
-        "usd": "Dolar",
-        "gbp": "доллар",
+        "usd": "доллар",
+        "gbp": "фунт",
         "rub": "Рубль",
         "btc": "Биткойн",
         "xrp": "Рябь",
